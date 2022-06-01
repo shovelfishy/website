@@ -1,0 +1,1343 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Lato:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  font-family: Montserrat, sans-serif;
+}
+
+h1{
+  font-weight:800;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background:#fff;
+}
+
+/* HOME PAGE */
+/* Styles the header for all pages */
+.shadow{
+  z-index: -100;
+  /* clip: rect(0px, 10000px, 2000px, 0px); */
+  box-shadow: 5px 0px 30px rgba(0,0,0,0.85);
+  position:absolute;
+  top:-20px;
+  width:100%;
+  height: 3000px;
+  right:350px;
+}
+
+.land header{
+  top: 0;
+  left: 0;
+  padding: 40px 105px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s;
+  position: absolute;
+  height: 144px;
+  transition: all 0.4s ease-out, height 0.4s ease-in;
+}
+
+.land .wrapper{
+  top: 0;
+  left: 0;
+  padding: 40px 105px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s;
+  position: fixed;
+}
+
+.land.active header{
+  padding-left: 455px;
+  left:-350px;
+}
+
+.land.active .header-bg{
+  position: fixed;
+  width: calc(100% - 350px);
+}
+
+.land .header-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background: #2f333d;
+  z-index: 999;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.land .nav.toggled{
+  transition: all 0.4s ease-out, height 0.4s ease-in;
+  height:80px;
+}
+
+.land .header-bg.toggled{
+  opacity: 1;
+}
+
+/* Header logo */
+.tag h1{
+  position: relative;
+  left: -100px;
+  transition: all 0.3s ease-out, opacity 0.2s;
+  opacity: 1;
+}
+
+.logo:hover + .tag h1{
+  left: 0;
+  opacity: 1;
+  transition: all 0.3s ease-out, opacity 0.2s;
+}
+
+.land.active .tag{
+  margin-left: -700px;
+}
+
+.tag{
+  color: inherit;
+  text-decoration: none;
+  margin-left: -1050px;
+  overflow: hidden;
+  letter-spacing: 2px;
+}
+
+.logo img{
+  width: 50px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Hamburger menu button */
+.toggle{
+  background: url('menu.png');
+  background-size: 25px;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active{
+  background: url('close.png');
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* A default style for all section elements */
+section{
+  position: absolute;
+  right: 0;
+  transition: all 0.4s ease-out, height 0s;
+  overflow: hidden;
+  background: #111111;
+  width: 100%;
+  color: #fff;
+}
+
+/* Style for the landing page (The first section of all pages will be have this styling) */
+.land{
+  position: absolute;
+  right: 0;
+  background: #111111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height: 100vh;
+  padding:100px;
+  transition: all 0.4s ease-out, height 0s;
+  overflow: hidden;
+}
+
+.intro{
+  height:3000px;
+  right:0;
+  position:absolute;
+  top:100vh;
+  width:100%;
+  background:#111
+}
+
+/* Moves the whole page to reveal slide menu */
+section.active{
+  right:350px;
+  padding-left:450px;
+}
+
+/* An overlay to modify the color of the video background */
+.overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:200%;
+  background-color: #6f7350;
+  z-index: 3;
+  mix-blend-mode: overlay;
+  transition: all 0.4s ease-out;
+}
+
+.overlay.active{
+  left:-350px;
+}
+
+/* Styles the text on the landing page */
+.text{
+  position:relative;
+  top:50px;
+  z-index:10;
+  transition: 0.4s ease-out;
+}
+
+.text h2{
+  font-size: 5em;
+  font-weight: 800;
+  line-height:1.4em;
+  text-shadow: 1px 0px 4px #d5ecff, 2px 0px 4px #d5ecff, 3px 0px 4px #d5ecff, 2px 0px 3px #2ca4d4, 2px 3px 15px #2ca4d4, 2px 0px 15px, 5px 0px 75px, 20px 0vw 100px #2ca4d4, 40px 0vw 100px #2ca4d4,-10px 0vw 100px #2ca4d4;
+  margin-bottom: 10px;
+  position: relative;
+  left:-4px;
+}
+
+/* creates neon flickering animation effect */
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;
+
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+@keyframes pulse {
+	0%, 32%, 50.4%, 68%{
+    text-shadow: 1px 0px 4px #d5ecffA6, 2px 0px 4px #d5ecffA6, 3px 0px 4px #d5ecffA6, 2px 0px 3px #2ca4d4A6, 2px 3px 15px #2ca4d4A6, 2px 0px 15px #ffffffA6, 5px 0px 75px #ffffffA6, 20px 0vw 100px #2ca4d4A6, 40px 0vw 100px #2ca4d4A6,-10px 0vw 100px #2ca4d4A6;
+    opacity: 0.9
+	}
+	8%, 24%, 38.4%, 60%, 80% {
+    text-shadow: 1px 0px 4px #d5ecff, 2px 0px 4px #d5ecff, 3px 0px 4px #d5ecff, 2px 0px 3px #2ca4d4, 2px 3px 15px #2ca4d4, 2px 0px 15px, 5px 0px 75px, 20px 0vw 100px #2ca4d4, 40px 0vw 100px #2ca4d4,-10px 0vw 100px #2ca4d4;
+    opacity: 1
+	}
+
+  80.1%{
+    text-shadow: 1px 0px 4px #d5ecff, 2px 0px 4px #d5ecff, 3px 0px 4px #d5ecff, 2px 0px 3px #2ca4d4, 2px 3px 15px #2ca4d4, 2px 0px 15px, 5px 0px 75px, 20px 0vw 100px #2ca4d4, 40px 0vw 100px #2ca4d4,-10px 0vw 100px #2ca4d4;
+    opacity: 1
+  }
+}
+
+.text .flicker-fast{
+  animation: flicker 5s linear 8;
+}
+
+.text .flicker-slow{
+  animation: flicker 8s linear 5;
+}
+
+.title{
+  animation: pulse 12.5s 40s infinite alternate;
+}
+
+.text h3{
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.separator{
+  position: relative;
+  top:-2px;
+}
+
+.text a{
+  background:white;
+  display: inline-block;
+  padding:15px 30px;
+  margin: 25px 0;
+  text-decoration: none;
+  color:black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  font-weight: 400;
+}
+
+.text a:hover{
+  letter-spacing: 5px;
+}
+
+/* styles the video background if video is toggled */
+.land video{
+  position:absolute;
+  top:0;
+  left:0;
+  object-fit: cover;
+  width:100%;
+  height:100%;
+  filter: brightness(50%);
+}
+
+/* styles the menu for all pages */
+.menu{
+  position: fixed;
+  right:0;
+  top:0;
+  width: 350px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  justify-content: center;
+}
+
+/* menu hover effect */
+.menu li::before{
+  content:"";
+  display:block;
+  height:0px;
+  width:4px;
+  border-radius: 60px;
+  background: #db6556;
+  position: absolute;
+  left:-10px;
+  /* top:11px; changes menu line closing direction */
+  transition: 0.5s;
+}
+
+.menu li:hover::before{
+  content:"";
+  display:block;
+  height:46px;
+  width:4px;
+  border-radius: 60px;
+  position: absolute;
+  background: #7eb6de;
+  left:-10px;
+  top:11px;
+  animation: color 0.5s;
+}
+
+@keyframes color{
+  0%{
+    background: #db6556;
+  }
+  50%{
+    background: #db6556;
+  }
+  100% {
+    background: #7eb6de;
+  }
+}
+
+/* different menu animation */
+/* @keyframes opacity{
+  0%{
+  opacity:0;
+}
+  100% {
+  opacity:1;
+}
+}
+
+.menu .animation{
+  display:block;
+  height:0px;
+  width:4px;
+  border-radius: 60px;
+  position: absolute;
+  background: #7eb6de;
+  left:78px;
+  top:277px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.menu li:hover~.animation{
+  animation: color 0.8s;
+}
+
+.menu li:nth-child(1):hover~.animation{
+  top:277px;
+  opacity: 1;
+  height:40px;
+}
+
+.menu li:nth-child(2):hover~.animation{
+  top:332px;
+  opacity: 1;
+  height:40px;
+}
+
+.menu li:nth-child(3):hover~.animation{
+  top:388px;
+  opacity: 1;
+  height:40px;
+}
+
+.menu li:nth-child(4):hover~.animation{
+  top:445px;
+  opacity: 1;
+  height:40px;
+} */
+
+.menu li{
+  list-style: none;
+  padding: 10px;
+  position:relative;
+  height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+.menu a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  display: inline-block;
+  width:100%;
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.menu ul li:hover a:not(.current){
+  color: #29a5e3;
+}
+
+.menu ul li:hover a{
+  transform-origin: left;
+  transform: translateX(5px);
+}
+
+/* highlights current page on the menu */
+.menu .current {
+  background-color: #b0c1d4;
+  opacity: 0.8;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 6px;
+  width: 190px;
+}
+
+.intro{
+  height: 150vh;
+}
+
+.grid{
+  display: grid;
+  height: 150vh;
+  width: 100%;
+  right: 0;
+  position: absolute;
+  padding: 80px 0px 0;
+  grid-template-rows: auto auto auto;
+}
+
+.intro.active .row{
+  padding-left: 450px;
+}
+
+.row{
+  padding: 0 100px;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-out;
+  filter: brightness(95%);
+}
+
+.row.one{
+  background:#ee4036;
+}
+
+.row.two{
+  background:#262261;
+}
+
+.row.three{
+  background:#faaf40;
+}
+
+.grid h1{
+  font-family: Montserrat;
+  text-transform: uppercase;
+  margin-bottom:6px;
+  font-size: 50px;
+}
+
+.grid p{
+  font-family: Montserrat;
+  margin-bottom:30px;
+  font-size: 26px;
+  text-align: center;
+  width: 80%;
+}
+
+.grid a{
+  text-decoration: none;
+}
+
+#anchor{
+  height: 80px;
+  top: 1px;
+  position: absolute;
+}
+
+/* button */
+.btn{
+  z-index: 100;
+  position: relative;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn::after, .btn::before{
+  position: absolute;
+  box-sizing: border-box;
+  z-index: -1;
+  width: 150px;
+  height: 45px;
+  display: flex;
+  content:"";
+  border-radius:5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.btn::after{
+  transition: all 0.3s
+}
+
+.btn:hover::after{
+  transform: translate(-4px,-4px);
+}
+
+.btn:hover::before{
+  transform: translate(4px,4px);
+}
+
+.btn span{
+  transition: all 0.2s;
+  color: white;
+  letter-spacing: 1px;
+  font-family: Poppins;
+  font-weight: 400;
+}
+
+.btn:hover span{
+  letter-spacing: 2px;
+}
+
+/* PORTFOLIO PAGE */
+
+/* dropdown menu and replit iframe */
+select{
+  width: 320px;
+  font-size: 18px;
+  height: 30px;
+}
+
+.html select{
+  width: 320px;
+  font-size: 22px;
+  height: 40px;
+}
+
+option{
+  font-family: Alata;
+  font-size: 20px;
+}
+
+.html option{
+  font-family: Alata;
+  font-size: 24px;
+}
+
+iframe{
+  z-index: 100;
+  width:80%;
+  height: 460px;
+  display: block;
+  margin: auto;
+}
+
+/* title and description */
+.heading{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 135px;
+}
+
+.heading h1{
+  font-size: 60px;
+  letter-spacing: 12px;
+  margin: 0 auto;
+}
+
+.heading p{
+  font-size: 20px;
+  width: 87%;
+  margin: 18px auto;
+}
+
+.heading p span{
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  top: -23px;
+}
+
+/* Horizontal line divider */
+.portfolio hr{
+  width: 95%;
+  margin: 25px auto 0;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Layout of the iframes and content */
+/* displays the repls side by side */
+.row1, .row2{
+  display: flex;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  top:35px;
+  color: white;
+  transition: right 0.4s ease-out;
+  right: 0;
+}
+
+.easy select, .turtle select{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.row2{
+  top: 100px;
+  margin-top: 10px;
+}
+
+/* background for row2 to make it stand out and improve viewability */
+.row2::after{
+  content: "";
+  width: 110%;
+  position: absolute;
+  right: 0;
+  top: -4%;
+  height: 110%;
+  z-index: -1;
+  background:#6f98b0;
+}
+
+.easy, .advanced, .challenges, .turtle{
+  width: 50%;
+  right: 0;
+  position: relative;
+  text-align: center;
+}
+
+.row1 h2,.row2 h2,.html h2{
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-family: Poppins;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  transition: all 0.3s;
+}
+
+.html h2{
+  font-size: 60px;
+  letter-spacing: 20px;
+  margin-bottom: 10px;
+}
+
+section.active .row1 h2, section.active .row2 h2{
+  letter-spacing: 5px;
+}
+
+.row1 p,.row2 p,.html p{
+  width: 80%;
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+/* unique styling for larger html repl iframe and text */
+.html p{
+  width: 80%;
+  margin: 20px auto 0;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.html{
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  top:170px;
+  color: white;
+  right: 0;
+  text-align: center;
+  margin-bottom: 250px;
+  transition: right 0.4s ease-out;
+}
+
+.html a{
+  display: block;
+  color: #61b6f2;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#html_{
+  width: 90%;
+  height: 650px;
+}
+
+/* corrects formatting of some divs when menu is toggled */
+section.active .row1,section.active .row2,section.active .html,section.active .heading{
+  width: calc(100% + 100px);
+  right: 100px;
+}
+
+
+/* ABOUT PAGE */
+
+/* landing page design */
+.about-land{
+  background-image: url("isometric-house.png");
+  height: calc(100vh - 20px);
+  width: 100%;
+  background-size: cover;
+  padding-left: 100px;
+  background-repeat: no-repeat;
+  background-color: #75858c;
+  background-attachment: fixed;
+  z-index: 1;
+  position: absolute;
+  transition: all 0.4sm ease-out, background-position 1s ease-out;
+}
+
+.about-land.active{
+  background-position: 30px 0px;
+}
+
+/* Custom wave SVG shape */
+.custom-shape-divider-bottom-1637852123 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: scale(-1,1);
+}
+.custom-shape-divider-bottom-1637852123 svg {
+    position: relative;
+    display: block;
+    width: calc(256% + 1.3px);
+    height: 143px;
+    transform: rotateY(180deg);
+}
+.custom-shape-divider-bottom-1637852123 .shape-fill {
+    fill: #111;
+}
+
+.about-land h1{
+  font-size: 55px;
+  letter-spacing: 6px;
+  margin-top: 250px;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  animation: hide 0.5s;
+}
+
+.about-land h1::before{
+  content: '';
+  background: #88d8fc;
+  width: 105%;
+  height: 100%;
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  transform-origin: left;
+  animation: reveal 0.8s ease-in-out;
+  transform: scaleX(0);
+}
+
+.about-land h1::after{
+  content: '';
+  background: #fcaf88;
+  visibility: visible;
+  width: 105%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transform-origin: left;
+  animation: reveal 1s ease-in-out 0.2s;
+  transform: scaleX(0);
+}
+
+.about-land h2{
+  font-size: 26px;
+  font-weight: 700;
+  width: fit-content;
+  letter-spacing: 2px;
+  position: relative;
+  animation: hide 0.8s;
+  color: #8adfeb;
+}
+
+.about-land h2::before{
+  content: '';
+  background: #ffff3b;
+  width: 110%;
+  height: 100%;
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  transform-origin: right;
+  animation: reveal2 0.8s ease-in-out 0.3s;
+  transform: scaleX(0);
+}
+
+/* content */
+.about{
+  padding-bottom: 120px;
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 100px;
+  z-index: 1;
+  top: calc(100vh - 20px);
+}
+
+.about.active{
+  padding-bottom: 200px;
+}
+
+.about h1{
+  color: #5a60e8;
+  font-size: 70px;
+  position: relative;
+  left: -1px;
+  margin-bottom: -5px;
+}
+
+.about h6{
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about .container, .about .container2{
+  background: #ebe9e4;
+  height: fit-content;
+  width: 50%;
+  padding: 30px;
+  color: #111;
+  position: relative;
+  border-radius: 5px;
+  line-height: 25px;
+}
+
+.container h1{
+  font-weight: 800;
+  color: #111;
+  position: none;
+  font-size: 36px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.about .container2{
+  top: 30px;
+  width: 36%;
+  left: 14%;
+  z-index: 0;
+  color:#ebe9e4;
+}
+
+/* div attached to container2 */
+.about div:nth-of-type(2){
+  background: #d4ccb8;
+  height: 100px;
+  width: 300px;
+  left: 245px;
+  position: absolute;
+  bottom: 50px;
+  z-index: -1;
+  transition: 0s;
+}
+
+/* styling for container2 hover effect */
+.about .container2 p{
+  color:#ebe9e4;
+  transition: all 0.3s 0s;
+}
+
+.container2:hover p{
+  color: #111;
+  transition: all 0.3s 0.5s;
+}
+
+.container2 h3{
+  font-size: 22px;
+  color: #111;
+  transform: scale(1.8) translateY(calc(50% + 8px));
+  left:25%;
+  width: fit-content;
+  position: relative;
+  margin: 0 0 10px;
+  transform-origin: top left;
+  transition: transform 0.5s, left 0.5s;
+}
+
+.about .container2:hover h3{
+  margin: 0px 0 10px;
+  left: 0;
+  transform: scale(1);
+}
+
+.container2 h4{
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+  position: absolute;
+  margin-left: -46px;
+  left: 50%;
+  letter-spacing: 8px;
+  top: 57%;
+  transition-delay: 0.3s;
+}
+
+.about .container2:hover h4{
+  visibility: hidden;
+  transition-delay: 0s;
+}
+
+/* modify the containers when menu toggled */
+section.active .container{
+  width: 80%;
+}
+
+section.active .container2 h3{
+  width: 80%;
+  transform: scale(1.8) translateY(50%);
+  left:32%;
+}
+
+section.active .container2{
+  width: 66%;
+}
+
+.about.active div:nth-of-type(2){
+  visibility: hidden;
+}
+
+/* tech review video section */
+.review{
+  width:560px;
+  height:315px;
+  position: relative;
+  display: inline-block;
+  bottom: 385px;
+  margin-bottom: -385px;
+  left: 0;
+  float: right;
+  text-align: center;
+  margin-right: 100px;
+}
+
+section.active .review{
+  float: none;
+  bottom: -105px;
+  left: 20px;
+}
+
+.about iframe{
+   width:560px;
+   height:315px;
+   border: none;
+   position: relative;
+   bottom: 0px;
+   border-radius: 5px;
+}
+
+.about h2{
+  display: inline-block;
+  margin: ;
+  position: relative;
+  font-size: 20px;
+  top:15px;
+  background: #edeadf;
+  color:black;
+  border-radius: 12px 6px 12px 6px;
+  padding: 15px 30px;
+}
+
+/* gradient background card placed behind the video with an offset */
+.about .background{
+  width:560px;
+  height:320px;
+  position: absolute;
+  right: -50px;
+  bottom: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about .background::after{
+  content: "";
+  width:1000px;
+  height:1000px;
+  position: absolute;
+  right: -100px;
+  bottom: -200px;
+  background: linear-gradient(-45deg, #eb3349,#ffc3a0, #06beb6, #48b1bf);
+  border-radius: 5px;
+  animation: rotate 15s infinite linear;
+  transform-origin: 60% 60%;
+}
+
+/* gradient background rotation */
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* onload landing page title reveal effect */
+@keyframes reveal{
+  0%{
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  45%,54.99%{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  55%{
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100%{
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes reveal2{
+  0%{
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+
+  60%,60.99%{
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  61%{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  100%{
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes hide{
+  0%,99.99%{
+    visibility: hidden;
+  }
+
+  100%{
+    visibility: visible;
+  }
+}
+
+
+
+/* VIRTUAL REALITY PAGE */
+
+/* Headings */
+.article{
+  z-index: 10;
+  color: white;
+  width: 100%;
+  top:200px;
+  padding-right: 220px;
+  padding-bottom: 100px;
+  padding-left: 100px;;
+  height: fit-content;
+  z-index: 1;
+  background: #111;
+  position: absolute;
+}
+
+.article h1{
+  font-size: 45px;
+  font-family: Montserrat;
+  letter-spacing: 2px;
+}
+
+.article h2{
+  font-family: Nunito;
+  font-weight:400;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.article h3{
+  font-family: Nunito;
+  font-weight:100;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.article p{
+  font-weight: 300;
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.comparison{
+  display: flex;
+  gap: 45px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.vr, .physical{
+  width: 50%;
+  background: #EBE7E1;
+  color: #111;
+  padding: 20px;
+  padding-left: 40px;
+  border-radius: 3px;
+}
+
+.comparison li{
+  font-weight: 300;
+  font-family: Lato;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.vr ul:nth-of-type(1){
+  margin-bottom: 20px;
+}
+
+.physical p:nth-of-type(1),section.active .physical p:nth-of-type(1){
+  margin-bottom: 65px;
+}
+
+.comparison h3,.comparison h2{
+  font-family: Alata;
+  font-size: 22px;
+  letter-spacing: 2px;
+  position: relative;
+  left: -20px;
+}
+
+.comparison h2{
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  position: relative;
+  left: -20px;
+}
+
+.comparison p{
+  font-size: 15px;
+}
+
+#vrvid{
+  margin: 50px auto 0;
+  width:80%;
+  height: 34.3vw;
+  display: block;
+}
+
+.article h4{
+  padding: 18px 80px 14px;
+  font-size: 26px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 0 0 calc(18% + 20px) calc(18% + 20px);
+  width: fit-content;
+  background: #EBE7E1;
+}
+
+.article hr{
+  margin-top: 10px;
+  margin-bottom: 35px;
+  background: white;
+  text-align: left;
+  height: 3.2px;
+  width: 300px;
+}
+
+
+
+
+
+/* Responsive landing page when window width is less than 891px */
+@media(max-width: 891px){
+  .land{
+    padding: 40px;
+    transition: all 0.5s ease, padding 0.3s ease-in, right 0.3s ease-in;
+  }
+
+  .land header{
+    padding: 42px;
+    transition: all 0.5s ease, padding 0.3s ease-in;
+  }
+
+  .land .nav{
+    transition: all 0.5s ease, left 0.3s ease-in, padding 0.3s ease-in;
+  }
+
+  .text h3{
+    font-size: 1em
+  }
+
+  .land.active{
+    right:250px;
+    padding: 40px 105px;
+    transition: all 0.5s ease, right 0.3s ease-in;
+  }
+
+  .land.active header{
+    padding-left:292px;
+    left:-250px;
+    transition: all 0.5s ease, left 0.3s ease-in, padding 0.3s ease-in;
+  }
+
+  .land .header-bg.active{
+    position: fixed;
+    width: calc(100% - 250px);
+    transition: 0.3s ease-in;
+  }
+
+  .menu{
+    width: 250px;
+    transform: scale(0.8,0.8);
+    transition: all 0.5s ease;
+  }
+
+  .shadow{
+    right:250px;
+    transition: 0.3s ease-in;
+  }
+}
+
+/* Scaling transition when window resized back to normal */
+@media(min-width:891px){
+    .menu{
+      transform: scale(1,1);
+      transition: all 0.5s ease;
+    }
+}
+
+/* Makes landing page taller to keep all content visible when height of window is below 450px */
+@media(max-height:450px){
+  .land.active{
+    height: calc(100vh + 140px);
+  }
+}
+
+@keyframes scale{
+  0%{
+    transform: scale(1,1);
+  }
+  100%{
+    transform: scale(0.85,0.85);
+  }
+}
+
+@keyframes scales {
+  0%{
+    transform: scale(0.85,0.85);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+/* Responsive landing page when window width is less than 798px AND height is below 400px*/
+@media(max-height: 400px) and (max-width: 798px){
+  .land header, .text{
+    animation: scale 0.6s ease;
+    transform: scale(0.85, 0.85);
+}
+}
+
+/*
+@media (min-height: 400px) and (min-width: 798px){
+  .land header, .text{
+    animation: scales 0.6s ease;
+    transform: scale(1, 1);
+}
+} */
