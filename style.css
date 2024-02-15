@@ -455,8 +455,8 @@ section.active{
   width: 100%;
   right: 0;
   position: absolute;
-  padding: 80px 0px 0; /* Use this when NOT using VIDEO BACKGROUND */
   padding: 0; /* Use this when using VIDEO BACKGROUND */
+  padding: 80px 0px 0; /* Use this when NOT using VIDEO BACKGROUND */
   grid-template-rows: auto auto auto;
 }
 
