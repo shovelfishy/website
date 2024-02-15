@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <link rel="preconnect" href="https://replit.com/@EDWARDLIEW/">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>CCT</title>
+</head>
+<body>
+  <div class="shadow" style="height:calc(400vh - 238px);"></div>
+  <section class="land">
+    <div class="header-bg"></div>
+    <div class="wrapper">
+    <header class="nav">
+      <a class="logo" href="index.html"><img src="icon.png" alt=""></a>
+      <div class="tag"><h1>DEXM<span style="font-size:16px">.</span></h1></div>
+      <div class="toggle"></div>
+    </header>
+    </div>
+  </section>
+
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="vr.html">Virtual Reality</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <div class="animation"></div>
+    </ul>
+  </div>
+
+<section class="portfolio">
+  <!-- Easy, advanced, challenge, turtle, html -->
+  <!-- headings and description -->
+  <div class="heading">
+  <h1>PORTFOLIO</h1>
+  <p><span>A showcase of my most prominent coding projects.</span><br>They include Python, Python Turtle, HTML, CSS and Javscript. Each section holds a specific type of project. Choose which project you want to check out in the dropdwon menu. Take a look around. Have fun!</p>
+  <hr>
+  </div>
+
+  <!-- row 1 of replit iframes -->
+  <!-- holds 2 iframes side by side -->
+  <div class="row1">
+    <!-- project 1 -->
+    <div class="easy">
+      <h2>Python Easy</h2>
+      <iframe id="easy_" frameborder="0" src="https://replit.com/@EDWARDLIEW/rpsedward-1?embed=true&lite=1"></iframe>
+      <p>A simple game of rock paper scissors game that only utilizes basic logic statements</p>
+      <!-- dropdown menu to select project -->
+      <select id="easy" name="easy" class="dropdown" onChange="update(event)">
+        <option value="rps">Rock Paper Scissors</option>
+        <option value="madlib">Madlib</option>
+        <option value="sorter">Number Sorter</option>
+        <option value="loop">Loop Game</option>
+      </select>
+    </div>
+
+    <!-- project 2 -->
+    <div class="advanced">
+      <h2>Python Advanced</h2>
+      <iframe id="advanced_" frameborder="0" src="https://replit.com/@EDWARDLIEW/rps-1?embed=true&lite=1"></iframe>
+      <p>A slighly more complex version of the rock paper scissors game where a win condition can be set</p>
+      <select id="advanced" name="advanced" class="dropdown" onChange="update(event)">
+        <option value="rps">Rock Paper Scissors</option>
+        <option value="computersncoders">Computer and Coders</option>
+        <option value="border">ASCII Border</option>
+        <option value="hangman">Hangman</option>
+      </select>
+    </div>
+  </div>
+
+<!-- row 2 of replit iframes -->
+<div class="row2">
+  <div class="challenges" data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-offset="-150">
+    <h2>Python Challenges</h2>
+    <iframe id="challenges_" frameborder="0" src="https://replit.com/@EDWARDLIEW/robobuddy?embed=true&lite=1"></iframe>
+    <p>A "game" (not really) where a RoboBuddy can move around within a confined area</p>
+    <select id="challenges" name="challenges" class="dropdown" onChange="update(event)">
+      <option value="robobuddy">RoboBuddy</option>
+      <option value="adventure">Choose your own adventure</option>
+      <option value="pwd">Password Generator</option>
+      <option value="discord">Discord Bot</option>
+    </select>
+  </div>
+
+  <div class="turtle" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-offset="-150">
+    <h2>Python Turtle</h2>
+    <iframe id="turtle_" frameborder="0" src="https://replit.com/@EDWARDLIEW/logo?embed=true&lite=1"></iframe>
+    <p>The website's logo made with Python Turtle</p>
+    <select id="turtle" name="turtle" class="dropdown" onChange="update(event)">
+      <option value="logo">DEXM Logo</option>
+      <option value="drawings">Random Drawings</option>
+      <option value="math">More Random Drawings</option>
+    </select>
+  </div>
+</div>
+
+<!-- standalone replit iframe for html -->
+<div class="html">
+  <h2 data-aos="fade-up" data-aos-duration="800">HTML</h2>
+  <iframe data-aos="fade-up" data-aos-offset="150" data-aos-duration="500" id="html_" frameborder="0" src="https://replit.com/@EDWARDLIEW/site-of-web-1?embed=true&lite=1"></iframe>
+  <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500" data-aos-delay="200">A simple introductory website I made for fun (and also for the course)</p>
+  <a class="weblink" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200" data-aos-duration="600" href="https://site-of-web-1.edwardliew.repl.co" target="_blank">Click here to visit the website</a>
+  <select data-aos="fade-up" data-aos-duration="400" data-aos-delay="400" data-aos-anchor-placement="top-bottom" id="html" name="html" class="dropdown" onChange="update(event)">
+    <option value="site">Intro website</option>
+    <option value="restaurant">Restaurant</option>
+    <option value="website">Travel Destination</option>
+  </select>
+</div>
+
+</section>
+<script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <title>CCT</title>
+</head>
+<body>
+
+<!-- All parts of the landing page was made fully responsive but the rest of the website was not -->
+<!-- Please check it out but resizing the document vertically and horizontally -->
+
+  <!-- landing page for all pages -->
+  <!-- the menu and fixed header for all pages -->
+  <div class="shadow" style="height: calc(250vh + 21px)"></div> <!-- shadow in slide menu -->
+  <section class="land">
+
+    <!-- fixed header when scroll -->
+    <div class="header-bg"></div>
+    <div class="wrapper">
+    <header class="nav">
+      <a class="logo" href="index.html"><img src="icon.png" alt=""></a>
+        <div class="tag"><h1>DEXM<span style="font-size:16px">.</span></h1></div>
+        <div class="toggle"></div>
+    </header>
+    </div>
+
+    <div class="overlay"></div>
+    <!-- <video src="vid.mp4" preload=‘auto’ autoplay muted loop></video> -->
+
+    <!-- home page text -->
+    <div class="text" data-aos="fade-right" data-aos-duration="600" data-aos-delay="200">
+      <h2 class="title">ED<span class="flicker-slow" style="animation-delay:0.3s;">W</span><span class="flicker-fast" style="animation-delay:1.2s;">A</span>R<span class="flicker-fast">D</span>'S <span class="flicker-fast">C</span><span class="flicker-slow">C</span><span class="flicker-fast" style="animation-delay:0.6s;">T</span></h2>
+      <h3 data-aos="fade-right" data-aos-delay="450">ICS2O <span class="separator">|</span> 2021</h3>
+      <p data-aos="fade-right" data-aos-delay="700">A personal website to showcase my work</p>
+      <div data-aos="fade-right" data-aos-delay="950"><a href="#anchor">Explore</a></div>
+    </div>
+  </section>
+
+  <!-- slide menu -->
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="vr.html">Virtual Reality</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <div class="animation"></div>
+    </ul>
+  </div>
+
+  <!-- short description of each page on the website -->
+  <section class="intro">
+    <div class="grid">
+      <!-- page anchor for explore button -->
+      <div id="anchor"></div>
+
+      <!-- about page section -->
+      <div class="row one">
+        <h1 data-aos-once="true" data-aos="fade-left">About DEXM.</h1>
+        <p data-aos-once="true" data-aos="fade-left" ><strong>DEXM</strong> is a personal portfolio to showcase my knowledge</p>
+        <div data-aos-once="true" data-aos="fade-left">
+        <a href="aboutme.html">
+          <div class="btn">
+            <span>Learn More</span>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- vr page section -->
+      <div class="row two" data-aos-once>
+        <h1 data-aos-once="true" data-aos="fade-right">Virtual Reality</h1>
+        <p data-aos-once="true" data-aos="fade-right">Discover the new advancements in the VR industry and how they are creatively being applied to real life</p>
+        <div data-aos-once="true" data-aos="fade-right" data-aos-offset="40" data-aos-anchor-placement="bottom-bottom">
+        <a href="vr.html">
+          <div class="btn">
+            <span>Learn More</span>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- portfolio page section -->
+      <div class="row three">
+        <h1 data-aos-once="true" data-aos="fade-left">Portfolio</h1>
+        <p data-aos-once="true" data-aos="fade-left">View my portfolio of coding projects from 2021. Languages used: Python, HTML, CSS, JavaScript</p>
+        <div data-aos-once="true" data-aos="fade-left" data-aos-delay="200" data-aos-anchor-placement="bottom-bottom">
+        <a href="portfolio.html">
+          <div class="btn">
+            <span>Learn More</span>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="javascript.js"></script>
+</body>
+</html>
