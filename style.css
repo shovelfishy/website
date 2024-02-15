@@ -220,6 +220,7 @@ section.active{
   margin-bottom: 10px;
   position: relative;
   left:-4px;
+  user-select: none;
 }
 
 /* creates neon flickering animation effect */
@@ -454,7 +455,8 @@ section.active{
   width: 100%;
   right: 0;
   position: absolute;
-  padding: 80px 0px 0;
+  padding: 80px 0px 0; /* Use this when NOT using VIDEO BACKGROUND */
+  padding: 0; /* Use this when using VIDEO BACKGROUND */
   grid-template-rows: auto auto auto;
 }
 
@@ -1011,7 +1013,7 @@ section.active .review{
 
 .about h2{
   display: inline-block;
-  margin: ;
+  margin: 20px;
   position: relative;
   font-size: 20px;
   top:15px;
